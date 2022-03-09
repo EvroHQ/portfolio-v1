@@ -177,8 +177,10 @@ particlesJS("particles-js", {
 });
 
 // Parralax Mouse Move //
-VanillaTilt.init(document.querySelector(".page__wrapper"), {
-	max: 10,
-	speed: 1000,
-	perspective: 1000
-});
+const VanillaTilt = () => {
+	VanillaTilt.init(document.querySelector(".page__wrapper"), {
+		max: 10,
+		speed: 1000,
+		perspective: 1000
+	})
+};
