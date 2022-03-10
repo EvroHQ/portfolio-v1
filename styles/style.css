@@ -124,6 +124,14 @@ html.transition *:after {
   width: 30px;
 }
 
+.mode-toggle .modesvg:hover {
+  background-color: red;
+}
+
+.mode-toggle .modesvg:hover {
+  color: red;
+}
+
 .mode-toggle .mode.mode-light .mode-icon, .mode-toggle .mode.mode-auto .mode-icon, .mode-toggle .mode.mode-dark .mode-icon {
   display: inline-block;
 }
@@ -506,7 +514,7 @@ nav .resume__btn:hover {
   bottom: 0px;
   left: 50px;
   right: auto;
-  z-index: 99;
+  z-index: 10;
 }
 
 .social__links li {

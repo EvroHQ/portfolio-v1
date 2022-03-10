@@ -6,9 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="styles/grained.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 
     <title>Christophe Kirkoussis | Portfolio</title>
 </head>
@@ -16,8 +19,48 @@
 <body>
     <!-- Cursor Follower -->
     <div class="cursor-follower"></div>
-    
+
     <!-- Dark Mode -->
+    <div class="mode-toggle" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1000">
+        <label title="Light Mode" class="mode mode-dark">
+            <input aria-label="Dark Mode" class="mode-input" type="radio" name="mode" value="dark" autocomplete="off" />
+            <span class="mode-icon">
+                <?xml version="1.0" encoding="UTF-8"?>
+                <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+                    <circle class="circle" cx="256" cy="256" r="126.66" />
+                    <path class="ray"
+                        d="m256 97.92c-8.22 0-14.88-6.66-14.88-14.88v-24.66c0-8.22 6.66-14.88 14.88-14.88s14.88 6.66 14.88 14.88v24.66c0 8.22-6.66 14.88-14.88 14.88z" />
+                    <path class="ray"
+                        d="m378.3 148.58c-3.81 0-7.62-1.45-10.52-4.36-5.81-5.81-5.81-15.23 0-21.04l17.44-17.44c5.81-5.81 15.23-5.81 21.04 0s5.81 15.23 0 21.04l-17.44 17.44c-2.91 2.91-6.71 4.36-10.52 4.36z" />
+                    <path class="ray"
+                        d="m453.62 270.88h-24.66c-8.22 0-14.88-6.66-14.88-14.88s6.66-14.88 14.88-14.88h24.66c8.22 0 14.88 6.66 14.88 14.88s-6.66 14.88-14.88 14.88z" />
+                    <path class="ray"
+                        d="m395.74 410.62c-3.81 0-7.62-1.45-10.52-4.36l-17.44-17.44c-5.81-5.81-5.81-15.23 0-21.04s15.23-5.81 21.04 0l17.44 17.44c5.81 5.81 5.81 15.23 0 21.04-2.91 2.91-6.71 4.36-10.52 4.36z" />
+                    <path class="ray"
+                        d="m256 468.5c-8.22 0-14.88-6.66-14.88-14.88v-24.66c0-8.22 6.66-14.88 14.88-14.88s14.88 6.66 14.88 14.88v24.66c0 8.22-6.66 14.88-14.88 14.88z" />
+                    <path class="ray"
+                        d="m116.26 410.62c-3.81 0-7.62-1.45-10.52-4.36-5.81-5.81-5.81-15.23 0-21.04l17.44-17.44c5.81-5.81 15.23-5.81 21.04 0s5.81 15.23 0 21.04l-17.44 17.44c-2.9 2.91-6.71 4.36-10.52 4.36z" />
+                    <path class="ray"
+                        d="m83.04 270.88h-24.66c-8.22 0-14.88-6.66-14.88-14.88s6.66-14.88 14.88-14.88h24.66c8.22 0 14.88 6.66 14.88 14.88s-6.66 14.88-14.88 14.88z" />
+                    <path class="ray"
+                        d="m133.7 148.58c-3.81 0-7.62-1.45-10.52-4.36l-17.44-17.44c-5.81-5.81-5.81-15.23 0-21.04s15.23-5.81 21.04 0l17.44 17.44c5.81 5.81 5.81 15.23 0 21.04-2.9 2.91-6.71 4.36-10.52 4.36z" />
+                </svg>
+            </span>
+        </label>
+
+        <label title="Dark Mode" class="mode mode-light">
+            <input aria-label="Light Mode" class="mode-input" type="radio" name="mode" value="light"
+                autocomplete="off" />
+            <span class="mode-icon">
+                <?xml version="1.0" ?>
+                <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <path class="boundary"
+                        d="M440.14,302.07c-20.52,81-93.9,140.93-181.28,140.93c-103.28,0-187-83.72-187-187s83.72-187,187-187    c2.77,0,5.54,0.06,8.28,0.18c-32.11,26.65-52.55,66.85-52.55,111.83c0,80.22,65.03,145.25,145.25,145.25    C389.52,326.27,417.14,317.36,440.14,302.07z" />
+                </svg>
+            </span>
+        </label>
+    </div>
 
     <!-- Full Width Background Image -->
     <div class="fullwidth__img"></div>
@@ -26,7 +69,7 @@
     <!-- 100vh Intro -->
     <main class="intro__fullwidth" id="container">
         <nav>
-            <div class="container-nav">
+            <div class="container-nav" data-aos="fade-down" data-aos-duration="1000">
                 <div class="logo">
                     <a href="index.html"><svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 1158 1158">
@@ -72,70 +115,40 @@
                     </a>
                 </ol>
                 <a class="resume__btn" href="https://christophekirkoussis.com/resume.pdf" target="_blank">Resume</a>
-                <!-- Dark Mode -->
-                <div class="mode-toggle">
-                    <label title="Light Mode" class="mode mode-dark">
-                        <input aria-label="Dark Mode" class="mode-input" type="radio" name="mode" value="dark"
-                            autocomplete="off" />
-                        <span class="mode-icon">
-                            <?xml version="1.0" encoding="UTF-8"?>
-                            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <circle class="circle" cx="256" cy="256" r="126.66" />
-                                <path class="ray"
-                                    d="m256 97.92c-8.22 0-14.88-6.66-14.88-14.88v-24.66c0-8.22 6.66-14.88 14.88-14.88s14.88 6.66 14.88 14.88v24.66c0 8.22-6.66 14.88-14.88 14.88z" />
-                                <path class="ray"
-                                    d="m378.3 148.58c-3.81 0-7.62-1.45-10.52-4.36-5.81-5.81-5.81-15.23 0-21.04l17.44-17.44c5.81-5.81 15.23-5.81 21.04 0s5.81 15.23 0 21.04l-17.44 17.44c-2.91 2.91-6.71 4.36-10.52 4.36z" />
-                                <path class="ray"
-                                    d="m453.62 270.88h-24.66c-8.22 0-14.88-6.66-14.88-14.88s6.66-14.88 14.88-14.88h24.66c8.22 0 14.88 6.66 14.88 14.88s-6.66 14.88-14.88 14.88z" />
-                                <path class="ray"
-                                    d="m395.74 410.62c-3.81 0-7.62-1.45-10.52-4.36l-17.44-17.44c-5.81-5.81-5.81-15.23 0-21.04s15.23-5.81 21.04 0l17.44 17.44c5.81 5.81 5.81 15.23 0 21.04-2.91 2.91-6.71 4.36-10.52 4.36z" />
-                                <path class="ray"
-                                    d="m256 468.5c-8.22 0-14.88-6.66-14.88-14.88v-24.66c0-8.22 6.66-14.88 14.88-14.88s14.88 6.66 14.88 14.88v24.66c0 8.22-6.66 14.88-14.88 14.88z" />
-                                <path class="ray"
-                                    d="m116.26 410.62c-3.81 0-7.62-1.45-10.52-4.36-5.81-5.81-5.81-15.23 0-21.04l17.44-17.44c5.81-5.81 15.23-5.81 21.04 0s5.81 15.23 0 21.04l-17.44 17.44c-2.9 2.91-6.71 4.36-10.52 4.36z" />
-                                <path class="ray"
-                                    d="m83.04 270.88h-24.66c-8.22 0-14.88-6.66-14.88-14.88s6.66-14.88 14.88-14.88h24.66c8.22 0 14.88 6.66 14.88 14.88s-6.66 14.88-14.88 14.88z" />
-                                <path class="ray"
-                                    d="m133.7 148.58c-3.81 0-7.62-1.45-10.52-4.36l-17.44-17.44c-5.81-5.81-5.81-15.23 0-21.04s15.23-5.81 21.04 0l17.44 17.44c5.81 5.81 5.81 15.23 0 21.04-2.9 2.91-6.71 4.36-10.52 4.36z" />
-                            </svg>
-                        </span>
-                    </label>
 
-                    <label title="Dark Mode" class="mode mode-light">
-                        <input aria-label="Light Mode" class="mode-input" type="radio" name="mode" value="light"
-                            autocomplete="off" />
-                        <span class="mode-icon">
-                            <?xml version="1.0" ?>
-                            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <path class="boundary"
-                                    d="M440.14,302.07c-20.52,81-93.9,140.93-181.28,140.93c-103.28,0-187-83.72-187-187s83.72-187,187-187    c2.77,0,5.54,0.06,8.28,0.18c-32.11,26.65-52.55,66.85-52.55,111.83c0,80.22,65.03,145.25,145.25,145.25    C389.52,326.27,417.14,317.36,440.14,302.07z" />
-                            </svg>
-                        </span>
-                    </label>
-                </div>
             </div>
         </nav>
 
         <div class="page__wrapper data-tilt" title="Light Mode">
-            <div class="container data-tilt">
-                <h3 class="small__heading">
+            <div class="container data-tilt" data-aos="fade-down"
+            data-aos-duration="1500" data-aos-delay="1000">
+                <h3 class="small__heading" data-aos="fade"
+                data-aos-duration="1500" data-aos-delay="1600">
                     Hi, my name is
                 </h3>
-                <h2 class="intro__name">Christophe Kirkoussis.</h2>
-                <h2 class="big__heading">I build things for the web.</h2>
-                <span class="exp__txt">I am a Front-end Web developer.
+                <h2 class="intro__name" data-aos="fade"
+                data-aos-duration="1500" data-aos-delay="2000">Christophe
+                    Kirkoussis.</h2>
+                <h2 class="big__heading" data-aos="fade"
+                data-aos-duration="1500" data-aos-delay="2500">I build
+                    things for the web.</h2>
+                <span class="exp__txt" data-aos="fade"
+                data-aos-duration="1500" data-aos-delay="1600">I am a
+                    Front-end Web developer.
                     I have good experience with HTML5, CSS3, SASS, JavaScript, React JS, Bootstrap, Adobe Photoshop,
                     Illustrator etc..</span>
-                <span class="questions">Have any questions? Feel free to contact me and have a nice day!</span>
-                <a href="mailto:kirkoussis.christophe@hotmail.com"><button class="contact">Contact Me!</button></a>
+                <span class="questions" data-aos="fade"
+                data-aos-duration="1500" data-aos-delay="1600">Have any
+                    questions? Feel free to contact me and have a nice day!</span>
+                <a href="mailto:kirkoussis.christophe@hotmail.com"><button class="contact" data-aos="fade"
+                    data-aos-duration="1500" data-aos-delay="2500">Contact Me!</button></a>
 
             </div>
         </div>
     </main>
     <!-- Arrow Down SVG -->
-    <svg class="arrowdown" width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg class="arrowdown" data-aos="zoom-in-left" data-aos-duration="2000" data-aos-delay="2500" width="100"
+        height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"
         style="width: 40px; height: 80px; transform: rotateY(0deg);">
         <style>
             .line-arrow-down2 {
@@ -219,8 +232,11 @@
     <script type="text/javascript">
         VanillaTilt.init(document.querySelector(".page__wrapper"), {
             max: 5,
-            speed: 500 
+            speed: 500
         });
+    </script>
+    <script>
+        AOS.init();
     </script>
 </body>
 

@@ -141,7 +141,6 @@ html.transition *:after {
     border: 1px solid darken($beige, 10%);
     z-index: 10;
 
-
     .mode {
         position: relative;
         line-height: 0;
@@ -149,6 +148,14 @@ html.transition *:after {
 
         svg {
             width: 30px;
+        }
+
+        &svg:hover {
+            background-color: red;
+        } 
+
+        &svg:hover {
+            color: red;
         }
 
         &.mode-light,
@@ -478,7 +485,7 @@ nav {
     bottom: 0px;
     left: 50px;
     right: auto;
-    z-index: 99;
+    z-index: 10;
 
     li {
         margin: 0;
@@ -648,7 +655,6 @@ nav {
         right: 20px;
         left: auto;
         z-index: 10;
-
 
         .mode {
             svg {
