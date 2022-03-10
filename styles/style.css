@@ -46,6 +46,7 @@ body {
   scroll-behavior: smooth;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  cursor: none;
 }
 
 a {
@@ -150,11 +151,13 @@ html.transition *:after {
   letter-spacing: 1px;
   font-size: clamp(14px, 1.5vw, 16px);
   line-height: 1.5;
+  pointer-events: none;
 }
 
 .intro__name {
   color: #0bc0ee;
   letter-spacing: 1px;
+  pointer-events: none;
 }
 
 .big__heading {
@@ -166,6 +169,7 @@ html.transition *:after {
   mix-blend-mode: luminosity;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
+  pointer-events: none;
 }
 
 h3 {
@@ -193,27 +197,28 @@ span {
   letter-spacing: 1px;
   font-size: clamp(12px, 1.5vw, 14px);
   line-height: 1.5;
+  pointer-events: none;
 }
 
 .cursor-follower {
-  position: absolute;
+  position: fixed;
   width: 1.5rem;
   height: 1.5rem;
-  background-color: #0bc0ee;
   -webkit-transition: opacity 0.25s ease, -webkit-transform 1s cubic-bezier(0.02, 1.2, 0.8, 1);
   transition: opacity 0.25s ease, -webkit-transform 1s cubic-bezier(0.02, 1.2, 0.8, 1);
   transition: transform 1s cubic-bezier(0.02, 1.2, 0.8, 1), opacity 0.25s ease;
   transition: transform 1s cubic-bezier(0.02, 1.2, 0.8, 1), opacity 0.25s ease, -webkit-transform 1s cubic-bezier(0.02, 1.2, 0.8, 1);
   opacity: 0.5;
-  z-index: 13;
+  border: 2px solid #0bc0ee;
+  z-index: 12;
   pointer-events: none;
   border-radius: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   -webkit-transition: 0.3s linear;
   transition: 0.3s linear;
-  -webkit-transform-origin: 75% 75%;
-          transform-origin: 75% 75%;
+  -webkit-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
   -webkit-transition-property: background, -webkit-transform, -webkit-transition;
   transition-property: background, -webkit-transform, -webkit-transition;
   transition-property: background, transform, transition;
@@ -228,9 +233,10 @@ span {
 }
 
 .link-grow {
-  -webkit-transform: scale(2.5);
-          transform: scale(2.5);
-  background-color: #0bc1ee4b;
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  background-color: transparent;
+  border: 1px solid #0bc1ee;
 }
 
 #particles-js {
@@ -240,7 +246,6 @@ span {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
-  z-index: 2;
 }
 
 .fullwidth__img {
@@ -266,11 +271,6 @@ span {
       -ms-flex-align: center;
           align-items: center;
   margin: 0 auto;
-}
-
-#wrapper {
-  width: 100vw;
-  height: 100vh;
 }
 
 #container > * {
@@ -307,7 +307,7 @@ span {
   overflow: hidden;
   max-width: 100%;
   margin: 0 auto;
-  z-index: 9;
+  z-index: 5;
 }
 
 .arrowdown {
@@ -434,7 +434,6 @@ nav ol {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: 999;
 }
 
 nav li {

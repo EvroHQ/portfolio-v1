@@ -4,15 +4,15 @@ var grained_options = {
 	'patternWidth': 400,
 	'patternHeight': 400,
 	'grainOpacity': 0.15,
-	'grainDensity': 3,
+	'grainDensity': 2.7,
 	'grainWidth': 1,
-	'grainHeight': 1
+	'grainHeight': 1.5
 }
 grained('#container', grained_options);
 
-// Cursor Effect //
+// Cursor Follower //
 let mouseCursor = document.querySelector(".cursor-follower");
-let navLinks = document.querySelectorAll('.list__items, .mode svg, button, .resume__btn, .social__links svg, .email, .arrowdown');
+let navLinks = document.querySelectorAll('.list__items, .mode, button, .resume__btn, .social__links svg, .email, .arrowdown');
 
 window.addEventListener("mousemove", cursor);
 

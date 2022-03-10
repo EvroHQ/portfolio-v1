@@ -83,6 +83,7 @@ body {
     background-color: $background;
     scroll-behavior: smooth;
     box-sizing: border-box;
+    cursor: none;
 }
 
 a {
@@ -182,11 +183,13 @@ html.transition *:after {
     letter-spacing: 1px;
     font-size: clamp(14px, 1.5vw, 16px);
     line-height: 1.5;
+    pointer-events: none;
 }
 
 .intro__name {
     color: $turquoise;
     letter-spacing: 1px;
+    pointer-events: none;
 }
 
 .big__heading {
@@ -197,6 +200,7 @@ html.transition *:after {
     -webkit-background-clip: text;
     mix-blend-mode: luminosity;
     filter: grayscale(100%);
+    pointer-events: none;
 }
 
 h3 {
@@ -224,24 +228,26 @@ span {
     letter-spacing: 1px;
     font-size: clamp(12px, 1.5vw, 14px);
     line-height: 1.5;
+    pointer-events: none;
 }
 
 .cursor-follower {
-    position: absolute;
+    position: fixed;
     width: 1.5rem;
     height: 1.5rem;
-    background-color: $turquoise;
     transition: transform 1s cubic-bezier(0.02, 1.2, 0.8, 1), opacity 0.25s ease;
     opacity: 0.5;
-    z-index: 13;
+    border: 2px solid #0bc0ee;
+    z-index: 12;
     pointer-events: none;
     border-radius: 50%;
     transform: translate(-50%, -50%);
     transition: 0.3s linear;
-    transform-origin: 75% 75%;
+    transform-origin: 100% 100%;
     transition-property: background, transform, transition;
     pointer-events: none;
 }
+
 
 @media (max-width: 1199px) {
     .cursor-follower {
@@ -250,8 +256,9 @@ span {
 }
 
 .link-grow {
-    transform: scale(2.5);
-    background-color: #0bc1ee4b;
+    transform: scale(2);
+    background-color: transparent;
+    border: 1px solid #0bc1ee;
 }
 
 #particles-js {
@@ -261,7 +268,6 @@ span {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
-    z-index: 2;
 }
 
 .fullwidth__img {
@@ -287,11 +293,6 @@ span {
     margin: 0 auto;
 }
 
-#wrapper {
-    width: 100vw;
-    height: 100vh;
-}
-
 #container>* {
     position: relative;
 }
@@ -313,7 +314,8 @@ span {
     overflow: hidden;
     max-width: 100%;
     margin: 0 auto;
-    z-index: 9;
+    z-index: 5;
+
 }
 
 .arrowdown {
@@ -412,7 +414,6 @@ nav {
         margin-left: auto;
         height: 40px;
         align-items: center;
-        z-index: 999;
     }
 
     li {
