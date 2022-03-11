@@ -227,10 +227,12 @@
         });
     </script>
     <script>
-        AOS.init();
         AOS.init({
-            disable: window.innerWidth < 720,
-            disable: window.innerHeight < 600,
+            disable: window.innerWidth < 720
+        }, {
+            disable: window.innerHeight < 600
+        }, {
+            startEvent: 'load'
         });
     </script>
     <script src="js/main.js"></script>
