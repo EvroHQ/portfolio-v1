@@ -124,14 +124,6 @@ html.transition *:after {
   width: 30px;
 }
 
-.mode-toggle .modesvg:hover {
-  background-color: red;
-}
-
-.mode-toggle .modesvg:hover {
-  color: red;
-}
-
 .mode-toggle .mode.mode-light .mode-icon, .mode-toggle .mode.mode-auto .mode-icon, .mode-toggle .mode.mode-dark .mode-icon {
   display: inline-block;
 }
@@ -316,6 +308,7 @@ span {
   max-width: 100%;
   margin: 0 auto;
   z-index: 5;
+  max-height: 100%;
 }
 
 .arrowdown {
@@ -610,9 +603,55 @@ nav .resume__btn:hover {
   }
 }
 
-@media only screen and (min-height: 500px) and (max-height: 1000px) and (orientation: landscape) {
+@media only screen and (min-height: 200px) and (max-height: 600px) and (orientation: landscape) {
+  nav {
+    padding-top: 10px;
+  }
+  .list__items {
+    display: none;
+  }
+  .social__links {
+    display: none;
+  }
+  .email {
+    display: none;
+  }
+  .mode-toggle {
+    display: none;
+  }
   .container {
-    padding-top: 100px;
+    padding-top: 2rem;
+    max-width: 500px;
+  }
+  .arrowdown {
+    display: none;
+  }
+  .big__heading {
+    font-size: 32px;
+  }
+  .small__heading {
+    font-size: 14px;
+  }
+  .intro__name {
+    font-size: 32px;
+  }
+  .exp__txt {
+    font-size: 14px;
+  }
+  .questions {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 767px) {
+  .page__wrapper {
+    top: -15vh;
+  }
+}
+
+@media only screen and (min-height: 812px) {
+  .page__wrapper {
+    min-height: 380px;
   }
 }
 
@@ -633,6 +672,15 @@ nav .resume__btn:hover {
   }
   .mode-toggle .mode svg {
     width: 25px;
+  }
+  .page__wrapper {
+    min-height: 80vh;
+  }
+  .exp__txt {
+    max-width: 600px;
+  }
+  body {
+    cursor: auto;
   }
 }
 
@@ -659,47 +707,76 @@ nav .resume__btn:hover {
   nav ol a {
     display: none;
   }
-  .exp__txt {
-    max-width: 600px;
+  nav .mode-toggle {
+    position: absolute;
+    right: 50px;
+    top: 40vh;
+    margin-left: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 200px;
+    padding: 5px 5px;
+    border-radius: 50px;
+    border: 1px solid #6c779a;
+    z-index: 10;
+  }
+  nav .mode-toggle::after {
+    display: none;
   }
   .container {
     max-width: 1300px;
     margin: auto;
     padding: 0 30px;
+    max-height: 100vh;
   }
   .email {
     display: none;
   }
   .mode-toggle {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 40px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    width: 80px;
     position: fixed;
-    bottom: 75px;
+    bottom: 10px;
     top: auto;
     right: 20px;
     left: auto;
     z-index: 10;
+    padding: 0 5px;
+    border: none;
   }
-  .mode-toggle .mode svg {
-    width: 25px;
-    margin: 0 auto;
+  @-webkit-keyframes identifier {}
+  @keyframes identifier {}  .mode-toggle::after {
+    display: none;
   }
-  .mode-toggle::after {
-    content: "";
-    display: block;
-    width: 1px;
-    height: 60px;
-    margin: 0px auto;
-    position: fixed;
-    bottom: 0;
-    right: 40px;
-    background-color: #8a93af;
-    opacity: 0.5;
+  .social__links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    left: 20px;
+  }
+  .social__links svg {
+    margin: 0 10px;
+  }
+  .social__links::after {
+    display: none;
   }
 }
 
@@ -715,6 +792,9 @@ nav .resume__btn:hover {
   }
   span {
     font-size: 12px;
+  }
+  .page__wrapper {
+    top: -15vh;
   }
 }
 

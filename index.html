@@ -7,12 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <script src="styles/grained.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-
+    <script src="js/grained.js"></script>
+    <script type="text/javascript" src="js/vanilla-tilt.js"></script>
     <title>Christophe Kirkoussis | Portfolio</title>
 </head>
 
@@ -120,28 +119,22 @@
         </nav>
 
         <div class="page__wrapper data-tilt" title="Light Mode">
-            <div class="container data-tilt" data-aos="fade-down"
-            data-aos-duration="1500" data-aos-delay="1000">
-                <h3 class="small__heading" data-aos="fade"
-                data-aos-duration="1500" data-aos-delay="1600">
+            <div class="container data-tilt" data-aos="fade-down" data-aos-duration="1500" data-aos-delay="1000">
+                <h3 class="small__heading" data-aos="fade" data-aos-duration="1500" data-aos-delay="1600">
                     Hi, my name is
                 </h3>
-                <h2 class="intro__name" data-aos="fade"
-                data-aos-duration="1500" data-aos-delay="2000">Christophe
+                <h2 class="intro__name" data-aos="fade" data-aos-duration="1500" data-aos-delay="2000">Christophe
                     Kirkoussis.</h2>
-                <h2 class="big__heading" data-aos="fade"
-                data-aos-duration="1500" data-aos-delay="2500">I build
+                <h2 class="big__heading" data-aos="fade" data-aos-duration="1500" data-aos-delay="2500">I build
                     things for the web.</h2>
-                <span class="exp__txt" data-aos="fade"
-                data-aos-duration="1500" data-aos-delay="1600">I am a
+                <span class="exp__txt" data-aos="fade" data-aos-duration="1500" data-aos-delay="1600">I am a
                     Front-end Web developer.
                     I have good experience with HTML5, CSS3, SASS, JavaScript, React JS, Bootstrap, Adobe Photoshop,
                     Illustrator etc..</span>
-                <span class="questions" data-aos="fade"
-                data-aos-duration="1500" data-aos-delay="1600">Have any
+                <span class="questions" data-aos="fade" data-aos-duration="1500" data-aos-delay="1600">Have any
                     questions? Feel free to contact me and have a nice day!</span>
                 <a href="mailto:kirkoussis.christophe@hotmail.com"><button class="contact" data-aos="fade"
-                    data-aos-duration="1500" data-aos-delay="2500">Contact Me!</button></a>
+                        data-aos-duration="1500" data-aos-delay="2500">Contact Me!</button></a>
 
             </div>
         </div>
@@ -225,9 +218,7 @@
         <a href="mailto:kirkoussis.christophe@hotmail.com">kirkoussis.christophe@hotmail.com</a>
     </section>
 
-    <script src="styles/main.js"></script>
-    <script src="/node_modules/tilt.js/dest/tilt.jquery.js"></script>
-    <script type="text/javascript" src="vanilla-tilt.js"></script>
+
 
     <script type="text/javascript">
         VanillaTilt.init(document.querySelector(".page__wrapper"), {
@@ -237,7 +228,12 @@
     </script>
     <script>
         AOS.init();
+        AOS.init({
+            disable: window.innerWidth < 720,
+            disable: window.innerHeight < 600,
+        });
     </script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
