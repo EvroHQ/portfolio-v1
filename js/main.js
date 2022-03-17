@@ -178,12 +178,13 @@ particlesJS("particles-js", {
 
 // Typed //
 const typed = new Typed(".auto-type", {
-	strings: ["hristophe Kirkoussis."],
+	strings: ["Christophe Kirkoussis."],
 	typeSpeed: 80,
 	backSpeed: 60,
 	loop: true,
+	autoInsertCss: true,
 	startDelay: 2500,
 	backDelay: 2500,
 	showCursor: true,
-	autoInsertCss: true
+	cursorChar: '|'
 });

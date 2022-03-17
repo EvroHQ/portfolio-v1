@@ -197,10 +197,6 @@ h2 {
 
 .typed-cursor {
   color: #8a93af;
-  font-size: 1px;
-  opacity: 0.5;
-  -webkit-animation: blink 0.7s infinite;
-          animation: blink 0.7s infinite;
 }
 
 span {
