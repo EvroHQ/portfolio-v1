@@ -4,9 +4,9 @@ var grained_options = {
 	'patternWidth': 400,
 	'patternHeight': 400,
 	'grainOpacity': 0.15,
-	'grainDensity': 2.7,
+	'grainDensity': 2.5,
 	'grainWidth': 1,
-	'grainHeight': 1.5
+	'grainHeight': 1
 }
 grained('#container', grained_options);
 
@@ -176,9 +176,14 @@ particlesJS("particles-js", {
 	"retina_detect": true
 });
 
-// Parralax Mouse Move //
-VanillaTilt.init(document.querySelector(".page__wrapper"), {
-	max: 10,
-	speed: 1000,
-	perspective: 1000
+// Typed //
+const typed = new Typed(".auto-type", {
+	strings: ["hristophe Kirkoussis."],
+	typeSpeed: 80,
+	backSpeed: 60,
+	loop: true,
+	startDelay: 2500,
+	backDelay: 2500,
+	showCursor: true,
+	autoInsertCss: true
 });
