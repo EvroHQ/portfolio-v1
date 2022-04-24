@@ -687,7 +687,7 @@ textarea:hover::placeholder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 1630px;
+  max-width: 1330px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -800,7 +800,7 @@ textarea:focus {
 }
 
 #submit {
-  width: 270px;
+  max-width: 270px;
   margin-top: 40px;
   padding: 0;
   font-family: "Poppins", sans-serif;
@@ -831,7 +831,7 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 800px;
+  max-width: 835px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -839,10 +839,11 @@ footer {
   -webkit-transform: translateZ(50px);
           transform: translateZ(50px);
   z-index: 1;
+  padding: 0 80px;
 }
 
 footer span {
-  font-size: 13px;
+  font-size: 12px;
 }
 
 .footer__container {
@@ -855,7 +856,7 @@ footer span {
           justify-content: center;
   margin-bottom: 60px;
   border: 1px solid #293149;
-  padding: 20px;
+  padding: 20px 0;
 }
 
 @media screen and (min-width: 1200px) {
@@ -916,7 +917,16 @@ footer span {
   }
 }
 
+@media screen and (max-width: 1500px) {
+  .container-contact {
+    padding: 0 100px;
+  }
+}
+
 @media screen and (max-width: 1200px) {
+  .container-contact {
+    padding: 0 80px;
+  }
   .social__links {
     left: 20px;
     right: auto;
@@ -945,6 +955,9 @@ footer span {
 }
 
 @media screen and (max-width: 720px) {
+  .container-contact {
+    padding: 0 30px;
+  }
   nav {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -958,8 +971,8 @@ footer span {
     padding: 0;
   }
   nav .logo svg {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
   }
   nav ol a {
     display: none;

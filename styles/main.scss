@@ -616,7 +616,7 @@ textarea:hover::placeholder {
 
 .container-contact {
     display: flex;
-    max-width: 1630px;
+    max-width: 1330px;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
@@ -712,7 +712,7 @@ textarea:focus {
 }
 
 #submit {
-    width: 270px;
+    max-width: 270px;
     margin-top: 40px;
     padding: 0;
 
@@ -743,14 +743,15 @@ textarea:focus {
 // Footer //
 footer {
     display: flex;
-    max-width: 800px;
+    max-width: 835px;
     justify-content: center;
     margin: 0 auto;
     transform: translateZ(50px);
     z-index: 1;
+    padding: 0 80px;
     
     span {
-        font-size: $fz-xs;
+        font-size: $fz-xxs;
     }
 }
 
@@ -760,7 +761,7 @@ footer {
     justify-content: center;
     margin-bottom: 60px;
     border: 1px solid $borderb;
-    padding: 20px;
+    padding: 20px 0;
 }
 
 // Media Queries MIN Width //
@@ -837,7 +838,17 @@ footer {
 
 // Media Queries MAX Width //
 
+@media screen and (max-width: 1500px) {
+    .container-contact {
+        padding: 0 100px;
+    }
+}
+
 @media screen and (max-width: 1200px) {
+    .container-contact {
+        padding: 0 80px;
+    }
+
     .social__links {
         left: 20px;
         right: auto;
@@ -874,6 +885,10 @@ footer {
 }
 
 @media screen and (max-width: 720px) {
+    .container-contact {
+        padding: 0 30px;
+    }
+
     nav {
         align-items: center;
         padding: 30px 30px;
@@ -887,8 +902,8 @@ footer {
         }
 
         .logo svg {
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
         }
 
         ol a {
