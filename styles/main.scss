@@ -748,7 +748,7 @@ footer {
     margin: 0 auto;
     transform: translateZ(50px);
     z-index: 1;
-    padding: 0 80px;
+    padding: 0 40px;
     
     span {
         font-size: $fz-xxs;
@@ -761,7 +761,7 @@ footer {
     justify-content: center;
     margin-bottom: 60px;
     border: 1px solid $borderb;
-    padding: 20px 0;
+    padding: 20px 10px;
 }
 
 // Media Queries MIN Width //
@@ -845,10 +845,6 @@ footer {
 }
 
 @media screen and (max-width: 1200px) {
-    .container-contact {
-        padding: 0 80px;
-    }
-
     .social__links {
         left: 20px;
         right: auto;
@@ -882,13 +878,14 @@ footer {
     body {
         cursor: auto;
     }
+
+    footer {
+        padding: 0 100px;
+        text-align: center;
+    }
 }
 
 @media screen and (max-width: 720px) {
-    .container-contact {
-        padding: 0 30px;
-    }
-
     nav {
         align-items: center;
         padding: 30px 30px;
@@ -979,6 +976,21 @@ footer {
         padding: 0 30px;
         text-align: center;
     }
+    .container-contact {
+        padding: 0 30px;
+    }
+    .contact__container {
+        padding: 0 20px;
+    }
+    
+    #submit {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 40px auto 0 auto;
+    }
+    
 }
 
 @media screen and (max-width: 280px) {
@@ -1001,7 +1013,6 @@ footer {
     .page__wrapper {
         top: -15vh;
     }
-
 }
 
 ::selection {

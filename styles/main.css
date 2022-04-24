@@ -839,7 +839,7 @@ footer {
   -webkit-transform: translateZ(50px);
           transform: translateZ(50px);
   z-index: 1;
-  padding: 0 80px;
+  padding: 0 40px;
 }
 
 footer span {
@@ -856,7 +856,7 @@ footer span {
           justify-content: center;
   margin-bottom: 60px;
   border: 1px solid #293149;
-  padding: 20px 0;
+  padding: 20px 10px;
 }
 
 @media screen and (min-width: 1200px) {
@@ -924,9 +924,6 @@ footer span {
 }
 
 @media screen and (max-width: 1200px) {
-  .container-contact {
-    padding: 0 80px;
-  }
   .social__links {
     left: 20px;
     right: auto;
@@ -952,12 +949,13 @@ footer span {
   body {
     cursor: auto;
   }
+  footer {
+    padding: 0 100px;
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 720px) {
-  .container-contact {
-    padding: 0 30px;
-  }
   nav {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -1051,6 +1049,25 @@ footer span {
   footer {
     padding: 0 30px;
     text-align: center;
+  }
+  .container-contact {
+    padding: 0 30px;
+  }
+  .contact__container {
+    padding: 0 20px;
+  }
+  #submit {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 40px auto 0 auto;
   }
 }
 
