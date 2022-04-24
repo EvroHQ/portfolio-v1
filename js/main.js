@@ -1,9 +1,9 @@
 // Grained //
-var grained_options = {
+const grained_options = {
 	'animate': true,
-	'patternWidth': 400,
-	'patternHeight': 400,
-	'grainOpacity': 0.15,
+	'patternWidth': 500,
+	'patternHeight': 500,
+	'grainOpacity': 0.1,
 	'grainDensity': 2.5,
 	'grainWidth': 1,
 	'grainHeight': 1
@@ -12,7 +12,7 @@ grained('#container', grained_options);
 
 // Cursor Follower //
 let mouseCursor = document.querySelector(".cursor-follower");
-let navLinks = document.querySelectorAll('.list__items, .mode, button, .resume__btn, .social__links svg, .email, .arrowdown');
+let navLinks = document.querySelectorAll('.list__items, a, .mode, button, .resume__btn, .social__links svg, .email, .arrowdown');
 
 window.addEventListener("mousemove", cursor);
 
