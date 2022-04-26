@@ -12,7 +12,7 @@ grained('#container', grained_options);
 
 // Cursor Follower //
 let mouseCursor = document.querySelector(".cursor-follower");
-let navLinks = document.querySelectorAll('.list__items, a, .mode, button, .resume__btn, .social__links svg, .email, .arrowdown');
+let navLinks = document.querySelectorAll('.list__items, a, .mode, button, .resume__btn, .social__links svg, .email, .arrowdown, .download__resume, #submit');
 
 window.addEventListener("mousemove", cursor);
 
@@ -49,11 +49,11 @@ document.querySelector('.mode-toggle').addEventListener('click', function (e) {
 		trans()
 		darkMode.classList.toggle('mode-light', isDark);
 		darkMode.classList.toggle('mode-dark', isLight);
+
 	} else {
 		trans()
 		darkMode.classList.remove('light');
 		darkMode.classList.remove('dark');
-
 	}
 });
 
@@ -188,3 +188,15 @@ const typed = new Typed(".auto-type", {
 	showCursor: true,
 	cursorChar: '|'
 });
+
+document.onkeypress = function (e) {
+	e = e || window.event;
+
+	if (e.keyCode === 13) {
+		document.documentElement.classList.toggle('mode-light');
+
+		document.querySelectorAll('.inverted').forEach((result) => {
+			result.classList.toggle('inverted');
+		})
+	}
+}
