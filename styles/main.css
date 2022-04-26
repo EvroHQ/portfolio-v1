@@ -214,6 +214,10 @@ span {
   pointer-events: none;
 }
 
+section {
+  margin-top: 5rem !important;
+}
+
 .cursor-follower {
   position: absolute;
   width: 1.5rem;
