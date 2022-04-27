@@ -200,3 +200,13 @@ document.onkeypress = function (e) {
 		})
 	}
 }
+
+window.scroll({
+	top: 2500,
+	left: 0,
+	behavior: 'smooth'
+});
+
+document.querySelector('.container-contact').scrollIntoView({
+	behavior: 'smooth'
+});

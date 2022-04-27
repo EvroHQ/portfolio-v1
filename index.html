@@ -80,16 +80,16 @@
                         </svg>
                 </div></a>
                 <ol>
-                    <a href="#skills">
+                    <a href="#about" id="#about">
                         <li class="list__items">About</li>
                     </a>
-                    <a href="#exp">
+                    <a href="#exp" id="#exp">
                         <li class="list__items">Experience</li>
                     </a>
-                    <a href="#work">
+                    <a href="#work" id="#work">
                         <li class="list__items">Work</li>
                     </a>
-                    <a href="#contact">
+                    <a href="#contact" id="#contact">
                         <li class="list__items">Contact</li>
                     </a>
                 </ol>
@@ -136,8 +136,11 @@
             <div class="about__wrapper__img">
                 <img class="inverted" src="./images/Chris.jpg" alt="picture">
             </div>
-            <p>Hi 👋, I am a Front-end Web developer. I have good experience with HTML5, CSS3, SASS, JavaScript,
-                React JS, Bootstrap, Adobe Photoshop, Illustrator, Figma.</p>
+            <p>Hello! My name is Christophe and I enjoy creating things that live on the internet. My interest in web
+                development started when I was a teenager, I had fun to modify everything via the google developer tool,
+                that's how I learned the basics of HTML & CSS. <br><br>After that, 2 years ago, I followed online
+                trainings courses via several sites that allowed me to acquire deeper skills of SASS, Javascript &
+                React.</p>
             <div class="info__list">
                 <ul>
                     <li><strong>Country:</strong> Belgium</li>
@@ -153,22 +156,25 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="section container-contact" id="#contact">
-        <h1>CONTACT ME</h1>
-        <div class="contact__container">
-            <form id="cform" method="get" novalidate="novalidate" class="topBefore">
-                <label for="name"></label>
-                <input id="name" type="text" name="Name" placeholder="NAME">
+    <div class="scrollable">
+        <section class="section container-contact" id="contact">
+            <h1>CONTACT ME</h1>
+            <span>Want to introduce me to a project, or just say hello?</span>
+            <div class="contact__container">
+                <form id="cform" method="get" novalidate="novalidate" class="topBefore">
+                    <label for="name"></label>
+                    <input id="name" type="text" name="Name" placeholder="NAME">
 
-                <label for="email"></label>
-                <input id="email" type="text" name="Email" placeholder="E-MAIL">
+                    <label for="email"></label>
+                    <input id="email" type="text" name="Email" placeholder="E-MAIL">
 
-                <label for="message"></label>
-                <textarea id="message" name="Message" type="textarea" placeholder="MESSAGE"></textarea>
+                    <label for="message"></label>
+                    <textarea id="message" name="Message" type="textarea" placeholder="MESSAGE"></textarea>
 
-                <input id="submit" type="submit" value="SEND">
-            </form>
-        </div>
+                    <input id="submit" type="submit" value="SEND">
+                </form>
+            </div>
+    </div>
     </section>
     <!-- End Contact Section -->
 
