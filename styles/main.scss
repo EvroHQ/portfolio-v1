@@ -211,12 +211,11 @@ html.transition *:after {
 
 .big__heading {
     color: $beige;
-    background-image: url(https://cdn.pixabay.com/photo/2016/04/11/11/33/watercolour-1321802_960_720.jpg);
+    background-image: url(https://images.unsplash.com/photo-1606054512716-fb198b6686c9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1742&q=80);
     background-attachment: fixed;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     mix-blend-mode: luminosity;
-    filter: grayscale(100%);
     pointer-events: none;
 }
 

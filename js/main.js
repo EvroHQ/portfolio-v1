@@ -34,8 +34,8 @@ navLinks.forEach(link => {
 var tl = gsap.timeline({
 	repeat: -1
 });
-tl.to("h2", 50, {
-	backgroundPosition: "1500px 0"
+tl.to("h2", 100, {
+	backgroundPosition: "500px 0px"
 });
 
 // Dark Mode Toggle //
