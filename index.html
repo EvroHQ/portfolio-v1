@@ -7,12 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <script src="js/grained.js"></script>
-    <script type="text/javascript" src="js/vanilla-tilt.js"></script>
-
     <title>Christophe Kirkoussis | Portfolio</title>
 </head>
 
@@ -69,7 +63,7 @@
     <!-- 100vh Intro -->
     <main class="intro__fullwidth" id="container">
         <nav>
-            <div class="container-nav" data-aos="fade-down" data-aos-duration="1000">
+            <div class="container-nav" data-aos="fade" data-aos-duration="1000" data-aos-delay="2000">
                 <div class="logo">
                     <a href="index.html">
                         <svg id="Calque_1" fill="#0bc0ee" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg"
@@ -120,17 +114,19 @@
     </main>
 
     <!-- Arrow Down SVG -->
-    <svg class="arrowdown" data-aos="zoom-in-left" data-aos-duration="2000" data-aos-delay="2500" width="100"
-        height="100" viewBox="0 0 330 330" fill="none" xmlns="http://www.w3.org/2000/svg"
-        style="width: 25px; height: 150px; transform: rotateY(0deg);">
-        <path class="line-arrow-down2 stroke1" id="a"
-            d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393  c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393  s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"
-            stroke="rgba(11,192,238,1)" fill="#0bc0ee" stroke-width="4.0px" stroke-linecap="round"
-            style="animation-duration: 0.8s;"></path>
-    </svg>
+    <div onclick="scrollToView()">
+        <svg class="arrowdown" data-aos="zoom-in-left" data-aos-duration="2000" data-aos-delay="2500" width="100"
+            height="100" viewBox="0 0 330 330" fill="none" xmlns="http://www.w3.org/2000/svg"
+            style="width: 25px; height: 150px; transform: rotateY(0deg);">
+            <path class="line-arrow-down2 stroke1" id="a"
+                d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393  c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393  s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"
+                stroke="rgba(11,192,238,1)" fill="#0bc0ee" stroke-width="4.0px" stroke-linecap="round"
+                style="animation-duration: 0.8s;"></path>
+        </svg>
+    </div>
 
     <!-- About Me Section -->
-    <section class="section about__container">
+    <section class="section about__container" id="about">
         <h1>ABOUT ME</h1>
         <div class="about__wrapper">
             <div class="about__wrapper__img">
@@ -154,6 +150,25 @@
             </div>
         </div>
     </section>
+    <!-- End About Section -->
+
+    <!-- Skills Section -->
+    <section class="section skills__container">
+        <h1>PROGRAMMING LANGUAGES</h1>
+        <div class="skills__wrapper">
+            <div class="info__list">
+                <ul>
+                    <li><strong>Country:</strong> Belgium</li>
+                    <li><strong>Address:</strong> Ternat - 1742</li>
+                    <li><strong>Email:</strong> kirkoussis.christophe@hotmail.com</li>
+                </ul>
+            </div>
+            <div class="resume__container">
+                <a class="download__resume" href="https://www.github.com/evrohq" target="_blank">Show more skills</a>
+            </div>
+        </div>
+    </section>
+    <!-- Skills Section -->
 
     <!-- Contact Section -->
     <div class="scrollable">
@@ -242,6 +257,17 @@
 
 
     <!-- JS Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
+        integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script type="text/javascript"
+        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CSSRulePlugin3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="js/grained.js"></script>
+    <script type="text/javascript" src="js/vanilla-tilt.js"></script>
     <script type="text/javascript">
         AOS.init({
             disable: window.innerWidth < 720
@@ -257,6 +283,11 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="js/main.js"></script>
+
+    <script>
+        gsap.set('.fullwidth__img', { y: 3000 });
+        tl.to(".fullwidth__img", { y: 0, duration: 2, ease: "expo.out" }, 1);
+    </script>
 </body>
 
 </html>

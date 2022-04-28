@@ -124,7 +124,6 @@ html.transition *:after {
 
     img {
         filter: invert(1) hue-rotate(-215deg);
-        ;
     }
 
     .fullwidth__img {
@@ -245,7 +244,7 @@ span {
     font-size: $fz-sm;
     margin: 10px 0 10px 0;
     letter-spacing: 1px;
-    font-size: clamp(14px, 1.5vw, 16px);
+    font-size: clamp(14px, 1.5vw, 14px);
     line-height: 1.5;
     pointer-events: none;
 }
@@ -265,12 +264,11 @@ span {
     transition-property: background, transform, transition;
     pointer-events: none;
     z-index: 1;
-}
 
-
-@media (max-width: 1199px) {
-    .cursor-follower {
-        display: none;
+    @media (max-width: 1199px) {
+        .cursor-follower {
+            display: none;
+        }
     }
 }
 
@@ -283,12 +281,13 @@ span {
 #particles-js {
     position: absolute;
     width: 100%;
+    height: 100%;
     z-index: 1;
 }
 
 .fullwidth__img {
     position: absolute;
-    background-image: url('https://images.unsplash.com/photo-1544646290-9ec4c8ff8277?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80');
+    background-image: url('https://images.unsplash.com/photo-1606054512716-fb198b6686c9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1742&q=80');
     left: 0;
     right: 0;
     display: block;
@@ -298,7 +297,13 @@ span {
     height: 100vh;
     margin: 0 auto;
     opacity: 0.2;
+    z-index: -9999;
+    transition: clip-path 1s ease-in-out;
 }
+
+// .fullwidth__img:hover {
+//     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+// }
 
 .intro__fullwidth {
     height: 100vh;
@@ -330,6 +335,7 @@ span {
     max-width: 100%;
     margin: 0 auto;
     max-height: 100%;
+    transform: opacity 0;
 }
 
 .arrowdown {
@@ -693,6 +699,50 @@ textarea:hover::placeholder {
         font-family: $ff-poppins;
         font-size: $fz-xxxl;
         color: $turquoise;
+    }
+}
+
+.skills__container {
+    display: flex;
+    max-width: 1330px;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0 30px;
+
+    h1 {
+        font-family: $ff-poppins;
+        font-size: $fz-xxxl;
+        color: $turquoise;
+    }
+}
+
+.skills__wrapper {
+    width: 100%;
+    margin: 20px auto 20px auto;
+    border: 1px solid $borderb;
+    padding: 40px 40px;
+
+    p {
+        margin-left: 220px;
+        color: $beige;
+        font-family: $ff-poppins;
+        letter-spacing: 1px;
+        font-size: clamp(14px, 1.5vw, 14px);
+        line-height: 1.5;
+        pointer-events: none;
+
+        @media screen and (max-width: 768px) {
+            text-align: center;
+            margin-top: 30px;
+            margin-left: 0px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin-left: 0px;
     }
 }
 

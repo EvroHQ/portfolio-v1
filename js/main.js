@@ -35,7 +35,7 @@ var tl = gsap.timeline({
 	repeat: -1
 });
 tl.to("h2", 50, {
-	backgroundPosition: "1000px 0"
+	backgroundPosition: "1500px 0"
 });
 
 // Dark Mode Toggle //
@@ -93,7 +93,7 @@ particlesJS("particles-js", {
 			}
 		},
 		"opacity": {
-			"value": 1,
+			"value": 0.5,
 			"random": true,
 			"anim": {
 				"enable": true,
@@ -210,3 +210,9 @@ window.scroll({
 document.querySelector('.container-contact').scrollIntoView({
 	behavior: 'smooth'
 });
+
+
+// Arrow Down Scroll //
+function scrollToView() {
+	window.scrollTo(1300, 1300);
+}
